@@ -1,4 +1,4 @@
-let img=["https://images.blz-contentstack.com/v3/assets/blt2ef8b4fee426fd3e/blt3d29e3d4489846b9/5f4616244eebe153cbb099be/screenshot_2.jpg","https://images.blz-contentstack.com/v3/assets/blt2ef8b4fee426fd3e/blt615cc938da6f1888/5f461624b7dcf5546ea92c29/screenshot_1.jpg","https://images.blz-contentstack.com/v3/assets/blt2ef8b4fee426fd3e/blt07227bea52668d97/5f4616250ac6ce5468cebb19/screenshot_3.jpg","https://images.blz-contentstack.com/v3/assets/blt2ef8b4fee426fd3e/blt1379791417434c8b/5f461625bb238f55563777db/screenshot_6.jpg"];
+let img=["Imagenes/imagen.jpg","Imagenes/imagen1.jpg","Imagenes/imagen2.jpg","Imagenes/imagen3.jpg"];
 var link=0;
 document.getElementById("Carusel").style.backgroundImage=`url(${img[link]})`;
 function ImagenAnt() {

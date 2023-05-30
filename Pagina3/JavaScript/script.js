@@ -1,32 +1,58 @@
 let corr=/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
-function Formulario() {
+function Formulario(event) {
     let error=false;
-    let listerrores=document.getElementById("errores");
+    let errorCR=false;
     let nombre=document.getElementById("nombre");
     let apellido=document.getElementById("apellido");
     let correo=document.getElementById("correoElectronico");
     let telefono=document.getElementById("telefono");
     let comentario=document.getElementById("comentario");
     if(nombre.value==""){
-        nombre.classList.add("error");
-        let p = document.createElement("p");
-        p.innerHTML = "Falta el nombre";
-        listerrores.appendChild(p);
+        document.querySelector("#errorNombre").innerHTML="*";
+        errorCR=true;
+    }else{
+        document.querySelector("#errorNombre").innerHTML="";
+    }
+    if(apellido.value==""){
+        document.querySelector("#errorApellido").innerHTML="*";
+        errorCR=true;
+    }else{
+        document.querySelector("#errorApellido").innerHTML="";
+    }
+    if(correo.value==""){
+        document.querySelector("#errorCorreo").innerHTML="*";
+        errorCR=true;
+    }else if(!corr.test(correo.value)){
+        document.querySelector("#errorCorreo").innerHTML="*Correo Invalido";
         error=true;
+    }else{
+        document.querySelector("#errorCorreo").innerHTML="";
     }
-    if(apellido==""){
+    if(telefono.value==""){
+        document.querySelector("#errorTelefono").innerHTML="*";
+        errorCR=true;
+    }else if(telefono.value.length<10){
+        document.querySelector("#errorTelefono").innerHTML="*Telefono muy corto";
         error=true;
+    }else{
+        document.querySelector("#errorTelefono").innerHTML="";
     }
-    if(correo==""){
+    if(comentario.value==""){
+        document.querySelector("#errorComentario").innerHTML="*";
         error=true;
+        errorCR=true;
+    }else{
+        document.querySelector("#errorComentario").innerHTML="";
     }
-    if(!corr.test(correo.value)){
-        
-        error=true;
+    if(errorCR){
+        document.querySelector("#errorGlobal").innerHTML="*Campo Requerido";
+    }else{
+        document.querySelector("#errorGlobal").innerHTML="";
     }
-    if(!error){
-        document.forms[F_Contacto].reset;
+    if(!error==true&&!errorCR==true){
+        console.alert("Formulario enviado");
     }
+    event.preventDefault();
     return false;
 }
 function verificarLetras(event) {

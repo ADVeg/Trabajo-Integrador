@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://static.starcraft2.com/dist/images/global/favicon.ico">
+    <link rel="shortcut icon" href="../Imagenes/favicon.ico">
     <link rel="stylesheet" href="Estilo/estilo3.css">
     
     <title>Contacto - StarCraft II</title>
@@ -12,37 +12,40 @@
 <body>
     <div class="Menu-Top">
         <a href="../Pagina2/index2.html" class="Menu-Pos-Izquierda">GALERIA</a>
-        <a href="../index.html" class="Menu-Pos-Centro"><img src="https://static.starcraft2.com/dist/images/global/logos/img-sc2-nav-icon.png" alt="Ancla Principal"></a>
+        <a href="../index.html" class="Menu-Pos-Centro"><img src="../Imagenes/Principal.png" alt="Ancla Principal"></a>
         <a href="index3.html" class="Menu-Pos-Derecha">CONTACTO</a>
     </div>
     <div class="FormC">
-        <form onsubmit="Formulario()" class="FormContacto" id="F_Contacto">
+        <form onsubmit="Formulario(event)" class="FormContacto" id="F_Contacto">
             <div class="Nombre">
                 <label for="nombre" >Nombre:</label>
                 <input id="nombre" placeholder="Nombre" onkeydown="verificarLetras(event)">
+                <p id="errorNombre"></p>
             </div>
             <div class="Apellido">
                 <label for="apellido" >Apellido:</label>
                 <input id="apellido" placeholder="Apellido" onkeydown="verificarLetras(event)">
+                <p id="errorApellido"></p>
             </div>
             <div class="CorreoElectronico">
                 <label for="correo electronico" >Correo electronico:</label>
                 <input id="correoElectronico" placeholder="Correo Electronico" >
+                <p id="errorCorreo"></p>
             </div>
             <div class="Telefono">
-                <label for="text">Telefono:</label>
-                <input id="telefono" min="0" placeholder="Telefono" >
+                <label for="telefono">Telefono:</label>
+                <input id="telefono" min="0" placeholder="Telefono" onkeydown="verificarNumeros(event)" >
+                <p id="errorTelefono"></p>
             </div>
             <div class="Comentario">
-                <label for="text">Comentario:</label><br>
-                <div class="CajaComentario">
-                    <textarea id="comentario" cols="50" rows="10" placeholder="Comentario" ></textarea>
-                </div>
+                <label for="comentario">Comentario:</label><br>
+                <textarea id="comentario" cols="50" rows="10" placeholder="Comentario" ></textarea>
+                <p id="errorComentario"></p>
             </div>
             <div class="BEnviar">
+                <p id="errorGlobal"></p>
                 <button type="submit" id="BEnviar">Enviar</button>
             </div>
-            <div id="errores"></div>
         </form>
     </div>
     <div class="contacto">
