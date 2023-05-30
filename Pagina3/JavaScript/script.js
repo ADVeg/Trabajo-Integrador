@@ -51,7 +51,7 @@ function Formulario() {
     }
     if(!error==true&&!errorCR==true){
         document.forms["F_Contacto"].reset();
-        console.alert("Formulario enviado");
+        alert("Formulario enviado");
     }
     return false;
 }
