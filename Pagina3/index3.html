@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://static.starcraft2.com/dist/images/global/favicon.ico">
+    <link rel="stylesheet" href="Estilo/estilo3.css">
+    
+    <title>Contacto - StarCraft II</title>
+</head>
+<body>
+    <div class="Menu-Top">
+        <a href="../Pagina2/index2.html" class="Menu-Pos-Izquierda">GALERIA</a>
+        <a href="../index.html" class="Menu-Pos-Centro"><img src="https://static.starcraft2.com/dist/images/global/logos/img-sc2-nav-icon.png" alt="Ancla Principal"></a>
+        <a href="index3.html" class="Menu-Pos-Derecha">CONTACTO</a>
+    </div>
+    <div class="FormC">
+        <form onsubmit="Formulario()" class="FormContacto" id="F_Contacto">
+            <div class="Nombre">
+                <label for="nombre" >Nombre:</label>
+                <input id="nombre" placeholder="Nombre" onkeydown="verificarLetras(event)">
+            </div>
+            <div class="Apellido">
+                <label for="apellido" >Apellido:</label>
+                <input id="apellido" placeholder="Apellido" onkeydown="verificarLetras(event)">
+            </div>
+            <div class="CorreoElectronico">
+                <label for="correo electronico" >Correo electronico:</label>
+                <input id="correoElectronico" placeholder="Correo Electronico" >
+            </div>
+            <div class="Telefono">
+                <label for="text">Telefono:</label>
+                <input id="telefono" min="0" placeholder="Telefono" >
+            </div>
+            <div class="Comentario">
+                <label for="text">Comentario:</label><br>
+                <div class="CajaComentario">
+                    <textarea id="comentario" cols="50" rows="10" placeholder="Comentario" ></textarea>
+                </div>
+            </div>
+            <div class="BEnviar">
+                <button type="submit" id="BEnviar">Enviar</button>
+            </div>
+            <div id="errores"></div>
+        </form>
+    </div>
+    <div class="contacto">
+        <h1 class="redesSociales">REDES SOCIALES</h1>
+        <div class="linksRedes">
+            <a href="https://www.facebook.com/StarCraft.es">facebook</a>
+            <a href="http://twitter.com/StarCraft_ES">twitter</a>
+            <a href="https://www.reddit.com/r/starcraft/">reddit</a>
+            <a href="https://www.youtube.com/user/starcraftes">youtube</a>
+            <a href="https://twitch.tv/starcraft">twitch</a>
+        </div>
+    </div>
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>

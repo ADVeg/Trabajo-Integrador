@@ -1,0 +1,30 @@
+@import url(../../Estilo/estilo.css);
+.FormContacto{
+    margin-top: 70px;
+    border: 2px solid #22476b;
+    background-color: #22476b9f;
+    width: 450px;
+    height: 400px;
+}
+label{
+    margin-left: 10px;
+}
+.BEnviar{
+    margin-top: 15px;
+    float: right;
+    margin-right: 5px;
+}
+
+.Nombre,.Apellido,.CorreoElectronico,.Telefono,.Comentario{
+    margin-top: 15px;
+}
+.CajaComentario{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.Telefono,.Nombre,.Apellido,.CorreoElectronico,.Comentario{
+    color: white;
+}
+.contacto{
+    margin-top: 90px;
+}

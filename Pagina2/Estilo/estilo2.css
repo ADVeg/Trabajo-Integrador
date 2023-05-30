@@ -1,0 +1,50 @@
+@import url(../../Estilo/estilo.css);
+#imgDerecha{
+    width: 100%;
+    height: 100%;
+}
+#imgIzquierda{
+    width: 100%;
+    height: 100%;
+}
+#botonDerecha{
+    float: right;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.486);
+    width: 50px;
+    height: 70px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+#botonIzquierda{
+    float: left;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.486);
+    width: 50px;
+    height: 70px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+#Carusel{
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 600px;
+    width: 960px;
+}
+#contCa{
+    margin-top: 65px;
+    margin-left: 170px;
+}
+#contCa:hover #botonIzquierda,#contCa:hover #botonDerecha{
+    opacity: 1;
+}
+.contacto{
+    margin-top: 10px;
+}

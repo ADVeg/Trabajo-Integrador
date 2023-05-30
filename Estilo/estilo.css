@@ -1,0 +1,57 @@
+html{
+    background-image: url(https://static.starcraft2.com/dist/images/global/home/img-homepage-video-poster-2400.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.Menu-Top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20,36,51,.8) linear-gradient(0deg,rgba(20,61,102,.2),rgba(20,61,102,0) 50%);
+    border-bottom: 2px solid #22476b;
+    position: fixed!important;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.Menu-Pos-Derecha{
+    height: 55px;
+    margin-right: 10px;
+}
+.Menu-Pos-Centro{
+    height: 55px;
+    float: center;
+}
+.Menu-Pos-Izquierda{
+    height: 55px;
+    margin-left: 10px;
+}
+
+.Menu-Pos-Derecha,.Menu-Pos-Centro,.Menu-Pos-Izquierda{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.Menu-Pos-Derecha:hover,.Menu-Pos-Centro:hover,.Menu-Pos-Izquierda:hover{
+    box-shadow: inset 0 0 20px rgba(102,179,255,.2);
+}
+.freeToPlay{
+    margin-top: 70px;
+}
+.contacto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #22476b9f;
+    border: 2px solid #22476b;
+}
+.redesSociales{
+    margin-left: 10px;
+}
+.linksRedes{
+    margin-right: 10px;
+}
