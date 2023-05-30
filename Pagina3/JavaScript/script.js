@@ -1,5 +1,5 @@
 let corr=/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
-function Formulario(event) {
+function Formulario() {
     let error=false;
     let errorCR=false;
     let nombre=document.getElementById("nombre");
@@ -50,9 +50,9 @@ function Formulario(event) {
         document.querySelector("#errorGlobal").innerHTML="";
     }
     if(!error==true&&!errorCR==true){
+        document.forms["F_Contacto"].reset();
         console.alert("Formulario enviado");
     }
-    event.preventDefault();
     return false;
 }
 function verificarLetras(event) {

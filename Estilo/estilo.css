@@ -92,3 +92,19 @@ small,#tituloLogo{
 a{
     text-decoration: none;
 }
+.Informacion1,.Informacion2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+.Info_P1,.Info_P2{
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: #22476b9f;
+    border: 2px solid #22476b;
+    border-radius: 10px;
+    padding: 10px;
+}
