@@ -1,5 +1,8 @@
 let corr=/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
 function Formulario() {
+    if(document.getElementById("envi")){
+        let div1=document.getElementById("bEnviar").removeChild(document.getElementById("envi"));
+    }
     let error=false;
     let errorCR=false;
     let nombre=document.getElementById("nombre");
@@ -34,6 +37,9 @@ function Formulario() {
     }else if(telefono.value.length<10){
         document.querySelector("#errorTelefono").innerHTML="*Telefono muy corto";
         error=true;
+    }else if(telefono.value.length>15){
+        document.querySelector("#errorTelefono").innerHTML="*Telefono muy largo";
+        error=true;
     }else{
         document.querySelector("#errorTelefono").innerHTML="";
     }
@@ -45,13 +51,18 @@ function Formulario() {
         document.querySelector("#errorComentario").innerHTML="";
     }
     if(errorCR){
-        document.querySelector("#errorGlobal").innerHTML="*Campo Requerido";
+        document.querySelector("#Global").innerHTML="*Campo Requerido";
     }else{
-        document.querySelector("#errorGlobal").innerHTML="";
+        document.querySelector("#Global").innerHTML="";
     }
     if(!error==true&&!errorCR==true){
+        ///alert("Formulario enviado");
+        var p=document.createElement("p");
+        p.id="envi";
+        p.style.color="green";
+        p.innerHTML= ("Gracias por contactarnos "+apellido.value+" "+nombre.value);
+        document.getElementById("bEnviar").appendChild(p);
         document.forms["F_Contacto"].reset();
-        alert("Formulario enviado");
     }
     return false;
 }

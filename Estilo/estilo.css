@@ -39,6 +39,7 @@ html{
 }
 .Menu-Pos-Derecha:hover,.Menu-Pos-Centro:hover,.Menu-Pos-Izquierda:hover{
     box-shadow: inset 0 0 20px rgba(102,179,255,.2);
+    filter: brightness(1.5)
 }
 .freeToPlay{
     margin-top: 70px;
@@ -107,4 +108,30 @@ a{
     border: 2px solid #22476b;
     border-radius: 10px;
     padding: 10px;
+}
+.facebook,.twitter,.reddit,.youtube,.twitch,.forums{
+    display: inline-block;
+    height: 56px;
+    width: 56px;
+}
+.facebook{
+    background-image: url(../Imagenes/icon-facebook.png);
+}
+.twitter{
+    background-image: url(../Imagenes/icon-twitter.png);
+}
+.reddit{
+    background-image: url(../Imagenes/icon-reddit.png);
+}
+.forums{
+    background-image: url(../Imagenes/icon-forums.png);
+}
+.youtube{
+    background-image: url(../Imagenes/icon-youtube.png);
+}
+.twitch{
+    background-image: url(../Imagenes/icon-twitch.png);
+}
+.facebook:hover,.twitter:hover,.reddit:hover,.youtube:hover,.twitch:hover,.forums:hover{
+    filter: brightness(1.3)
 }

@@ -32,7 +32,7 @@ form p{
     display: inline-block;
     margin: 0;
 }
-#errorGlobal{
+.BEnviar p{
     display: flex;
     float: left;
 }
